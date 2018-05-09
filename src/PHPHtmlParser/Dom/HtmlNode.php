@@ -15,7 +15,7 @@ class HtmlNode extends InnerNode
     /**
      * Remembers what the innerHtml was if it was scanned previously.
      */
-    public $innerHtml = null;
+    protected $innerHtml = null;
 
     /**
      * Remembers what the outerHtml was if it was scanned previously.
@@ -51,6 +51,10 @@ class HtmlNode extends InnerNode
         }
         $this->tag = $tag;
         parent::__construct();
+    }
+    
+    public function setInnerHtml($value) {
+        $this->innerHtml = $value;
     }
 
     /**
